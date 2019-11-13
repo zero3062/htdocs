@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>test</title>
+    <script type="text/javascript">
+      function add(){
+        var num1 = document.all.num1.value;
+        var num2 = document.all.num2.value;
+        document.all.result.value = parseInt(num1) + parseInt(num2);
+      }
+      function btn_js_prompt_click(){
+        var num;
+    	  var name_value = prompt("배팅 금액", num);
+        var num = parseInt(num);
+        var num1 = document.all.result.value;
+        document.all.result.value = parseInt(num1) + eval(num);
+      }
+    </script>
+  </head>
+  <body>
+    <input type="text" name="num1" size="5"> + <input type="text" name="num2" size="5">
+    <input type="button"value="연산" onclick="add();">
+    <br>
+    <br>
+    <input type="text" name="result" size="7">
+    <input type="button" name="btn_js_prompt" id="btn_js_prompt" onclick="btn_js_prompt_click();" value="질문창" />
+
+  </body>
+</html>

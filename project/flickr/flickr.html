@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>참신한 생각이 필요하세요? | Flickr</title>
+    <link href="https://fonts.googleapis.com/css?family=Blinker&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image⁄x-icon" href="flickr.png">
+    <style media="screen">
+      *{
+        margin:0;
+        padding: 0;
+      }
+      body{
+        -webkit-animation: colorchange 60s infinite;
+        animation: colorchange 60s infinite;
+      }
+      @-webkit-keyframes colorchange {
+         0%  {background: red;}
+        10%  {background: orange;}
+        20%  {background: yellow;}
+        30%  {background: #b5ff0e;}
+        40% {background: #1cffd8;}
+        50% {background: blue;}
+        60% {background: purple;}
+        70% {background: pink;}
+        80% {background: gray;}
+        90% {background: black;}
+        100% {background: red;}
+      }
+      @keyframes colorchange {
+        0%  {background: red;}
+       10%  {background: orange;}
+       20%  {background: yellow;}
+       30%  {background: #b5ff0e;}
+       40% {background: #1cffd8;}
+       50% {background: blue;}
+       60% {background: purple;}
+       70% {background: pink;}
+       80% {background: gray;}
+       90% {background: black;}
+       100% {background: red;}
+      }
+      #menu{
+        position: fixed;
+      }
+      a{
+        text-decoration: none;
+      }
+      .bottom a:hover{
+        color:white;
+      }
+      .bottom a{
+        color: gray;
+      }
+      li{
+        list-style: none;
+        padding-left: 20px;
+      }
+      .top{
+        position: relative;
+        background-color: rgba(0,0,0, 0.7);
+        height: 63px;
+        width: 1000%;
+      }
+      span{
+        position: absolute;
+        top: 12px;
+        padding-left: 25px;
+        vertical-align: middle;
+        font-family: 'Blinker', sans-serif;
+        font-size: 31px;
+        font-weight: bold;
+        color: white;
+      }
+      .login{
+        position: fixed;
+        top: 21px;
+        right: 143px;
+        color: white;
+      }
+      .top .enter{
+        position: fixed;
+        top: 16px;
+        right: 40px;
+        background-color: white;
+        border: 0px;
+        padding: 5px 25px 5px 25px;
+        font-weight: bold;
+        font-size:15px;
+        border-radius:2px;
+      }
+      .enter:hover{
+        color: #5e5e5e;
+      }
+      .search{
+
+      }
+      .box{
+        position: relative;
+        top:-48px;
+        left: 200px;
+        background-color: white;
+        height: 31px;
+        width: 1050px;
+        opacity: 0.8;
+        border-radius:2px;
+      }
+      input{
+        position: absolute;
+        left: 30px;
+        height: 100%;
+        width: 100%;
+        font-size: 100%;
+        border-style: none;
+        background-color: white;
+      }
+      input:focus {
+        outline: none;
+      }
+      .main{
+        width: 605px;
+        text-align: center;
+      }
+      .sentence1{
+        padding-top:200px;
+        font-size: 50px;
+        font-weight: bold;
+        color: white;
+      }
+      .sentence2{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-size: 25px;
+        font-weight: bold;
+        color: white;
+      }
+      .main_enter{
+        background-color: white;
+        border: 0px;
+        padding: 10px 60px 10px 60px;
+        font-weight: bold;
+        font-size: 20px;
+        border-radius:2px;
+        margin-bottom: 185px;
+      }
+      .main_enter:hover{
+        color: #5e5e5e;
+      }
+      .bottom{
+        position: fixed;
+        background-color: black;
+        bottom: 0px;
+        height: 50px;
+        width: 100%;
+      }
+      ul{
+        padding-top: 16px;
+        padding-left: 215px;
+      }
+      li{
+        font-size: 13px;
+        font-weight: bold;
+        float: left;
+        padding-left: 70px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="menu">
+      <div class="top">
+        <a href="flickr.html"><span>flickr</span><a>
+        <a class="login" href="https://identity.flickr.com/login?redir=https%3A%2F%2Fwww.flickr.com%2F">로그인</a>
+        <a href="https://identity.flickr.com/sign-up"><button class="enter" type="button" name="button">가입</button><a>
+      </div>
+      <div class="search">
+        <form class="box">
+          <a href="https://www.flickr.com/search/?text="><img src="glass1.png" width="20px;" style="position: absolute;top:5px;left:5px;"></a>
+          <input type="text" placeholder="사진, 인물 또는 그룹">
+        </form>
+      </div>
+    </div>
+    <center>
+      <div class="main">
+        <p class="sentence1">참신한 생각이 필요하세요?</p>
+        <p class="sentence2">Flickr 커뮤니티에 참여하여 수백억 개의 사진과 2백만개의 그룹을 만나보세요.</p>
+        <a href="https://identity.flickr.com/sign-up"><button class="main_enter" type="button" name="button">가입</button></a>
+      </div>
+    </center>
+    <div class="bottom">
+      <ul>
+        <a href="https://www.flickr.com/about"><li>정보</li></a>
+        <a href="https://www.flickr.com/jobs"><li>구인/구직</li></a>
+        <a href="https://blog.flickr.net/en"><li>블로그</li></a>
+        <a href="https://www.flickr.com/services/developer"><li>개발자</li></a>
+        <a href="https://www.flickr.com/help/guidelines"><li>지침</li></a>
+        <a href="https://www.flickr.com/help/privacy"><li>개인 정보</li></a>
+        <a href="https://www.flickr.com/help/terms"><li>이용약관</li></a>
+        <a href="https://www.flickr.com/help/forum/ko-kr/"><li>도움말 포럼</li></a>
+        <a href="#"><li>한글</li></a>
+      </ul>
+    </div>
+  </body>
+</html>

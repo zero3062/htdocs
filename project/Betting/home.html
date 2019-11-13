@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>Poker</title>
+    <style media="screen">
+      html{
+        font-family: 'Frank Ruhl Libre', serif;
+      }
+      button{
+        background-color: white;
+        border: 1px solid black;
+        font-size: 20px;
+        font-family: 'Frank Ruhl Libre', serif;
+      }
+      div{
+        margin-bottom: 20px;
+      }
+      input{
+        font-family: 'Frank Ruhl Libre', serif;
+      }
+      .p1 input, .p2 input, .GS input{
+        background-color: white;
+        border: 1px solid black;
+        font-size: 20px;
+      }
+      .GS input{
+        font-size: 30px;
+      }
+    </style>
+    <script type="text/javascript">
+      function search_onclick_submit1(){
+        var num1 = document.all.res1.value;
+        var num2 = document.all.add1.value;
+        document.all.res1.value = parseInt(num1) + parseInt(num2);
+      }
+      function search_onclick_submit2(){
+        var num1 = document.all.res2.value;
+        var num2 = document.all.add2.value;
+        document.all.res2.value = parseInt(num1) + parseInt(num2);
+      }
+      function G_S(){
+        var num1 = document.all.res1.value;
+        var num2 = document.all.res2.value;
+        var num3 = 1000;
+        document.all.res1.value = parseInt(num1) - parseInt(num3);
+        document.all.res2.value = parseInt(num2) - parseInt(num3);
+        document.all.BM.value = parseInt(num3) + parseInt(num3);
+      }
+      function put1(){
+        var num1 = document.all.P1I.value;
+        var num2 = document.all.res1.value;
+        var num3 = document.all.BM.value;
+        document.all.res1.value = parseInt(num2) - parseInt(num1);
+        document.all.BM.value = parseInt(num1) + parseInt(num3);
+      }
+      function put2(){
+        var num1 = document.all.P2I.value;
+        var num2 = document.all.res2.value;
+        var num3 = document.all.BM.value;
+        document.all.res2.value = parseInt(num2) - parseInt(num1);
+        document.all.BM.value = parseInt(num1) + parseInt(num3);
+      }
+      function call1(){
+        var num1 = document.all.P2I.value;
+        var num2 = document.all.res1.value;
+        var num3 = document.all.BM.value;
+        document.all.res1.value = parseInt(num2) - parseInt(num1);
+        document.all.BM.value = parseInt(num3) + parseInt(num1);
+      }
+      function call2(){
+        var num1 = document.all.P1I.value;
+        var num2 = document.all.res2.value;
+        var num3 = document.all.BM.value;
+        document.all.res2.value = parseInt(num2) - parseInt(num1);
+        document.all.BM.value = parseInt(num3) + parseInt(num1);
+      }
+      function raise1(){
+        var num = document.all.P1I.value;
+        var num1 = document.all.P2I.value;
+        var num2 = document.all.res1.value;
+        var num3 = document.all.BM.value;
+        document.all.res1.value = parseInt(num2) - parseInt(num1) - parseInt(num);
+        document.all.BM.value = parseInt(num3) + parseInt(num1) + parseInt(num);
+        document.all.P2I.value = parseInt(num1) + parseInt(num);
+      }
+      function raise2(){
+        var num = document.all.P2I.value;
+        var num1 = document.all.P1I.value;
+        var num2 = document.all.res2.value;
+        var num3 = document.all.BM.value;
+        document.all.res2.value = parseInt(num2) - parseInt(num1) - parseInt(num);
+        document.all.BM.value = parseInt(num3) + parseInt(num1) + parseInt(num);
+        document.all.P1I.value = parseInt(num1) + parseInt(num);
+      }
+      function all1(){
+        var num1 = document.all.res1.value;
+        var num2 = document.all.BM.value;
+        document.all.res1.value = 0;
+        document.all.BM.value = parseInt(num1) + parseInt(num2);
+      }
+      function all2(){
+        var num1 = document.all.res2.value;
+        var num2 = document.all.BM.value;
+        document.all.res2.value = 0;
+        document.all.BM.value = parseInt(num1) + parseInt(num2);
+      }
+      function die1(){
+        var num1 = document.all.res2.value;
+        var num2 = document.all.BM.value;
+        document.all.BM.value = 0;
+        document.all.res2.value = parseInt(num1) + parseInt(num2);
+      }
+      function die2(){
+        var num1 = document.all.res1.value;
+        var num2 = document.all.BM.value;
+        document.all.BM.value = 0;
+        document.all.res1.value = parseInt(num1) + parseInt(num2);
+      }
+      function P1W(){
+        die2();
+      }
+      function P2W(){
+        die1();
+      }
+    </script>
+  </head>
+  <body>
+    <div class="in">
+      <fieldset>
+        <h4>Add the Money of Player1 :
+          <input type="number" name="add1" value="" onKeypress="javascript:if(event.keyCode==13) {search_onclick_submit1()}" min="10000" max="100000" step="10000">
+          <button style="font-size:15px;"type="button" name="button" onclick="search_onclick_submit1();">Go</button>
+        </h4>
+        <h4>Add the Money of Player2 :
+          <input type="number" name="add2" value="" onKeypress="javascript:if(event.keyCode==13) {search_onclick_submit2()}" min="10000" max="100000" step="10000">
+          <button style="font-size:15px;"type="button" name="button" onclick="search_onclick_submit2();">Go</button>
+        </h4>
+      </fieldset>
+    </div>
+    <div class="p1">
+      <fieldset>
+        <h3>Player 1</h3>
+        <h5>Money : <input type="text" name="res1" readonly value="100000"></h5>
+        <input type="button" name="check1" value="Check">
+        <input type="button" name="call1" value="Call" onclick="call1();">
+        <input type="button" name="raise1" value="Raise" onclick="raise1();">
+        <input type="button" name="fold1" value="Fold"  onclick="die1();">
+        <input type="button" name="allin1" value="All In" onclick="all1();">
+        <h5 name="P1P">Put the Money : <input type="text" name="P1I" onKeypress="javascript:if(event.keyCode==13) {put1()}"> </h5>
+      </fieldset>
+    </div>
+    <div class="center">
+      <fieldset>
+        <h3>Betting Money</h3>
+        <input type="text" name="BM" value="0" readonly>
+      </fieldset>
+    </div>
+    <div class="p2">
+      <fieldset>
+        <h3>Player 2</h3>
+        <h5>Money : <input type="text" name="res2" readonly value="100000"></h5>
+        <input type="button" name="check1" value="Check">
+        <input type="button" name="call1" value="Call" onclick="call2();">
+        <input type="button" name="raise1" value="Raise" onclick="raise2();">
+        <input type="button" name="fold1" value="Fold" onclick="die2();">
+        <input type="button" name="allin1" value="All In" onclick="all2();">
+        <h5 name="P2P">Put the Money : <input type="text" name="P2I" onKeypress="javascript:if(event.keyCode==13) {put2()}"> </h5>
+      </fieldset>
+    </div>
+    <div class="GS">
+      <center>
+        <input type="button" name="" value="Game Start" onclick="G_S();">
+        <input type="button" name="" value="Player1 Win" onclick="P1W();">
+        <input type="button" name="" value="Player2 Win" onclick="P2W();">
+      </center>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <title>google</title>
+    <link href="googleimg.jpg" rel="shortcut icon" type="image/x-icon">
+  </head>
+  <style type="text/css">
+    body {
+      min-height: 100%;
+      margin: 0;
+    }
+    a{
+      text-decoration-line: none;
+      text-decoration: none;
+      color: gray;
+    }
+    .up {
+      font-size: 12px;
+      margin-top: 20px;
+      position: relative;
+    }
+    .up .button {
+      position: absolute;
+      right: 10px;
+      margin: 0;
+      padding: 5px 10px 5px 10px;
+      background-color: #4285F4;
+      color: white;
+      border: none;
+    }
+    .up .button:hover{
+      box-shadow: 0px 1px 0px 1px #a1a1a1;
+    }
+    .up img {
+      position: absolute;
+      top: 3px;
+      right: 90px;
+      width: 25px;
+      height: 25px;
+    }
+    .images {
+      position: absolute;
+      right: 130px;
+      top: 8px;
+    }
+    .images:hover{
+      text-decoration: underline;
+    }
+    .gmail {
+      position: absolute;
+      right: 180px;
+      top: 8px;
+    }
+    .gmail:hover {
+      text-decoration: underline;
+    }
+    .title{
+      padding-left: 10px;
+      color: #a1a1a1;
+      border: 1px solid #eeeeee;
+      width: 490px;
+      height: 40px;
+      border-radius: 30px;
+      position: relative;
+    }
+    *:focus{
+      outline: none;
+    }
+    .title:hover {
+      box-shadow: 0px 0px 10px #a1a1a1;
+    }
+    button {
+      font-size: 15px;
+      margin-top: 25px;
+      border: none;
+      background: #f6f6f6;
+    }
+    .logo{
+      font-family: "Century Gothic";
+      margin-bottom: 20px;
+    }
+    .line {
+      font-size: 16px;
+      color: gray;
+      padding-left: 20px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      margin-top: 230px;
+      border-top: 1px solid #eeeeee;
+      background-color: #f6f6f6;
+    }
+    .blew {
+      position: relative;
+      font-size: 12px;
+      color: gray;
+      padding-left: 20px;
+      padding-top: 20px;
+      padding-bottom: 10px;
+      margin:0 auto;
+      border-top: 1px solid #eeeeee;
+      background-color: #f6f6f6;
+    }
+    .country{
+      padding-left: 20px;
+    }
+    .R {
+      position: absolute;
+      right: auto;
+    }
+    .L {
+      position: absolute;
+      bottom: 0;
+      right: 20px;
+    }
+    .google__search{
+      margin: 0 auto;
+      position: relative;
+      width: 490px;
+    }
+    .google__input__icon{
+      position: absolute;
+      width: 20px;
+      height:20px;
+      top: 12px;
+      right: 50px;
+    }
+    .google__mike__icon {
+      position: absolute;
+      width: 19px;
+      height:24px;
+      top: 10px;
+      right: 10px;
+    }
+  </style>
+  <body>
+    <div class="up">
+      <a href="#" class="gmail">Gmail</a>
+      <a href="#" class="images">이미지</a>
+      <a href="#" title="Google 앱"><img src="app.png"></a>
+      <input class="button" type="button" value="로그인">
+    </div>
+    <div class="logo" style="text-align:center; padding-top: 170px;"> <!--구글 로고 만들기 -->
+      <span style="font-size: 80px ;color:#4169E1; font-weight: bold;">G</span>
+      <span style="font-size: 80px ;color:red; font-weight: bold;">o</span>
+      <span style="font-size: 80px ;color:orange; font-weight: bold;">o</span>
+      <span style="font-size: 80px ;color:#4169E1; font-weight: bold; ">g</span>
+      <span style="font-size: 80px ;color:#00B600; font-weight: bold;">l</span>
+      <span style="font-size: 80px ;color:red; font-weight: bold; ">e</span>
+    </div>
+    <div class="google" style="text-align:center">
+        <div class="google__search">
+          <a title="검색"><input lang="ko" class="title" type = "text" placeholder="Google 검색 또는 URL 입력"></a>
+          <a href="home.html"><img class="google__input__icon" src="keyboard.png"></a>
+          <a><img class="google__mike__icon" src="mike.jpg"></a>
+        </div>
+      <button type="button" style="color:gray; padding: 7px 12px 7px 12px">Google 검색</button>
+      <button type="button" style="color:gray; padding: 9px 12px 8px 12px">I'm Feeling Lucky</button>
+    </div>
+    <div class="line">
+      <div class="country">
+        대한민국
+      </div>
+      <ul class="blew">
+        <div class="R">
+          광고
+          비즈니스
+          Google 정보
+          검색의 원리
+        </div>
+        <div class="L">
+          개인정보처리방침
+          약관
+          설정
+        </div>
+      </ul>
+    </div>
+  </body>

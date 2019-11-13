@@ -1,0 +1,70 @@
+h1 {
+  padding-left: 25px;
+  font-size: 70px;
+  test-align: left;
+  padding-bottom: 20px;
+  margin: 0;
+}
+li{
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+#main-menu {
+height: 35px;
+width: 450px;
+border-bottom: 1px solid gray;
+}
+#main-menu  li {
+  float: left;
+  width: 150px;
+  position: relative;
+}
+#main-menu ul {
+  right: 20px;
+  margin-top: 15px;
+  list-style: none;
+  position: absolute;
+  display: none;
+}
+#main-menu li:hover ul{
+  display: block;
+}
+#main-menu ul li {
+  border: 1px solid gray;
+  padding: 5px 10px 5px 10px;
+  width: 120px;
+}
+.intro {
+  clear: both;
+  position: absolute;
+  width: 200;
+  float: right;
+  top: 14px;
+  right: 14px;
+  overflow: hidden;
+}
+.intro li{
+  margin: 0px;
+  padding: 10px;
+  float: left;
+}
+.intro a {
+  padding-right:10px;
+}
+.txt{
+  margin-top: 10px;
+  width: 200px;
+  height: 0px;
+}
+.txt input{
+  border-color: red;
+  display: block;
+  text-align: left;
+  vertical-align: middle;
+  margin-bottom: 20px;
+  border: 1px solid gray;
+  width: 150px;
+  height: 20px;
+}

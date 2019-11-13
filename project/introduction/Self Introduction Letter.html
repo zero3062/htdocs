@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Self Introdution Letter</title>
+    <style>
+      * {
+        margin : 0px;
+        padding: 0px;
+      }
+       body, head{
+        height: 100%;
+        width: 100%;
+      }
+      a{
+        text-decoration:none;
+      }
+      #back{
+        position: relative;
+      }
+      #back li{
+        width:100%;
+        font-size: 3em;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        list-style: none;
+        color: gray;
+        background-color: rgb(255, 255, 255);
+      }
+      .fir {
+        width: 25%;
+        height: 100%;
+        background-color:#61d0c1;
+        float: left;
+      }
+      .sec {
+        width: 25%;
+        height: 100%;
+        background-color: #eae4ba;
+        float: left
+      }
+      .thi {
+        width: 25%;
+        height: 100%;
+        background-color: #fdd6aa;
+        float: left
+      }
+      .fou {
+        width: 25%;
+        height: 100%;
+        background-color: #fb8276;
+        float: left
+      }
+      .fir_in, .sec_in, .thi_in, .fou_in{
+        height: 568px;
+        margin: 10px 10px 10px 10px;
+        padding: 40px 10px 10px 10px;
+        background-clip: content-box;
+        background-color: white;
+      }
+      p{
+        padding: 20px 0px 10px 10px;
+        font-size: 70px;
+        color: gray;
+      }
+      .fir_in:hover, .sec_in:hover, .thi_in:hover, .fou_in:hover{
+        box-shadow: 10px 10px 10px gray;
+      }
+      @media(max-width:800px){
+        .fir, .sec, .thi, .fou {
+          height: 25%;
+          width: 100%;
+          float: top;
+        }
+        .fir_in, .sec_in, .thi_in, .fou_in{
+          height: 100px;
+        }
+        img{
+          display: none;
+        }
+      }
+      span{
+        font-size: 35px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="back">
+      <div class="my">
+        <li>자기소개서</li>
+      </div>
+      <div class="fir">
+        <a href="profile.html"><div class="fir_in">
+          <p>01 <span>자기소개</span></p>
+          <img src="hito.png" alt="" >
+        </div></a>
+      </div>
+      <div class="sec">
+        <div class="sec_in">
+          <p>02 <span>포토폴리오</span></p>
+          <img src="film.png" alt="" style="width:200px;padding-left:20px; ">
+        </div>
+      </div>
+      <div class="thi">
+        <div class="thi_in">
+          <p>03 <span>지원동기</span></p>
+          <img src="docs.png" alt="">
+        </div>
+      </div>
+      <div class="fou">
+        <div class="fou_in">
+          <p>04 <span>나의 각오</span></p>
+          <img src="hand.png" style="width:200px; padding-left:20px;">
+        </div>
+      </div>
+    </div>
+</html>

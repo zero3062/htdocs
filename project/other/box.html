@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <style>
+    div{
+      width: 50px;
+    }
+    ul{
+      font-size: 20px;
+      list-style: none;
+      width: 50px;
+    }
+    li:hover{
+      text-decoration: underline;
+    }
+    </style>
+    <script type="text/javascript">
+    // function out1() {
+    //    document.getElementById('list1').style.textDecoration = "underline";
+    // }
+    // function out2() {
+    //   document.getElementById('list2').style.textDecoration = "underline";
+    // }
+    // function out3(){
+    //   document.getElementById('list3').style.textDecoration = "underline";
+    // }
+    // function out4(){
+    //   document.getElementById('list4').style.textDecoration = "underline";
+    // }
+    function out(e) {
+      var test = document.getElementById(e.getAttribute('id')).getAttribute('id')
+      document.getElementById(test).style.textDecoration = "underline";
+    }
+    function value_in() {
+      var input = document.getElementById('in').value;
+      temp = input;
+      var node = document.createElement('li');
+      node.setAttribute('id', temp);
+      node.setAttribute('onmouseout', 'out(this)')
+      var textnode = document.createTextNode(temp);
+      node.appendChild(textnode);
+      document.getElementById("print").appendChild(node);
+    }
+    function keydown(){
+      if (event.keyCode == 13) {
+        value_in();
+      }
+    }
+    </script>
+  </head>
+  <body>
+    <div>
+      <ul>
+        <li id="list1" onmouseout="out(this)">list1</li>
+        <li id="list2" onmouseout="out(this)">list2</li>
+        <li id="list3" onmouseout="out(this)">list3</li>
+        <li id="list4" onmouseout="out(this)">list4</li>
+        <li id="test1" onmouseout="out(this)">test1</li>
+      </ul>
+      <input id="in" type="text" onkeydown="keydown()">
+      <button type="button" onclick="value_in()">Print</button>
+      <ul id="print">
+        <!-- <li id="coffee" onmouseout="out(this)">Coffee</li>
+        <li id="tea" onmouseout="out(this)">Tea</li> -->
+      </ul>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>menu</title>
+    <style>
+      #topMenu {
+        height: 30px;
+        width: 850px;
+      }
+      #topMenu ul {
+        list-style-type: none;
+        margin: 0px;
+        padding: 0px;
+      }
+      #topMenu ul li {
+        color: white;
+        background-color: #2d2d2d;
+        float: left;
+        line-height: 30px;
+        vertical-align: middle;
+        text-align: center;
+        position: relative;
+      }
+      .menuLink, .submenuLink {
+        text-decoration:none;
+        display: block;
+        width: 150px;
+        font-size: 12px;
+        font-weight: bold;
+        font-family: "Trebuchet MS", Dotum;
+      }
+      .menuLink {
+        color: white;
+      }
+      .topMenuLi:hover .menuLink {
+        color: red;
+        background-color: #4d4d4d;
+      }
+      .submenuLink {
+        border: 1px solid black;
+        color: #2d2d2d;
+        background-color: white;
+      }
+      .longLink {
+        width: 190px;
+      }
+      .submenu {
+        position: absolute;
+        height: 0px;
+        overflow: hidden;
+        transition: height .2s;
+      }
+      .topMenuLi:hover .submenu {
+        height: 93px;
+        border: 1px solid black;
+      }
+      .submenuLink:hover {
+        color: red;
+        background-color: #dddddd;
+      }
+    </style>
+  </head>
+  <body>
+    <nav id="topMenu" >
+      <ul>
+        <li class="topMenuLi">
+          <a class="menuLink" href="http://unikys.tistory.com/category/Programming%20Lecture/%EB%B0%91%EB%B0%94%EB%8B%A5%EB%B6%80%ED%84%B0%20%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80%20%EB%A7%8C%EB%93%A4%EA%B8%B0">LECTURES</a>
+          <ul class="submenu">
+            <li><a class="submenuLink longLink">속깊은 자바스크립트 강좌</a></li>
+            <li><a class="submenuLink longLink">밑바닥부터 홈페이지 만들기</a></li>
+            <li><a class="submenuLink longLink">안드로이드 앱 개발</a></li>
+          </ul>
+        </li>
+        <li>|</li>
+        <li class="topMenuLi">
+          <a class="menuLink" href="http://unikys.tistory.com/guestbook">GUEST BOOK</a>
+        </li>
+        <li>|</li>
+        <li class="topMenuLi">
+          <a class="menuLink" href="http://unikys.tistory.com/tag">TAG CLOUD</a>
+          <ul class="submenu">
+            <li><a class="submenuLink">자바스크립트</a></li>
+            <li><a class="submenuLink">K100D</a></li>
+            <li><a class="submenuLink">강좌</a></li>
+          </ul>
+        </li>
+        <li>|</li>
+        <li class="topMenuLi">
+          <a class="menuLink" href="http://unikys.tistory.com/media">MEDIA LOG</a>
+        </li>
+        <li>|</li>
+        <li class="topMenuLi">
+          <a class="menuLink" href="http://unikys.tistory.com/location">LOCATION LOG</a>
+        </li>
+      </ul>
+    </nav>
+  </body>
+</html>
