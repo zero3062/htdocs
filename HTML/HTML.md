@@ -18,3 +18,18 @@
 (HTML tag는 "heading", "paragraph", "table" 등과 같은 내용의 일부를 붙인 것이다.)<Br>
 **Browsers do not display the HTML tags, but use them to render the content of the page.**
 (브라우저들에는 HTML 태그가 나타나지 않지만 그것들을 사용하여 페이지의 내용을 나타냅니다.)<Br>
+
+## A Simple HTML Document
+### Example
+`<!DOCTYPE html>`
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+<h1>My First Heading</h1>
+<p>My first paragraph.</p>
+
+<body>
+</html>
