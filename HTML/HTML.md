@@ -1,7 +1,8 @@
 # HTML 정리
 
 ## What is HTML
-### HTML is the standard markup language for creating Web pages. <br>(HTML은 WEB 페이지를 생성할 수 있는 표준 Markup 언어이다.)
+### HTML is the standard markup language for creating Web pages.
+> (HTML은 WEB 페이지를 생성할 수 있는 표준 Markup 언어이다.)
 
 - HTML stands for Hyper Text Markup Language <br>HTML은 Hyper Text Markup 언어를 나타냅니다.
 - HTML describes the structure of a Web page <br>HTML은 WEB 페이지의 구조를 묘사합니다.
