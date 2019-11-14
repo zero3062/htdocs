@@ -21,7 +21,8 @@
 
 ## A Simple HTML Document
 ### Example
-```<!DOCTYPE html>
+```
+<!DOCTYPE html>
 <html>
 <head>
 <title>Page Title</title>
@@ -32,4 +33,5 @@
 <p>My first paragraph.</p>
 
 <body>
-</html>```
+</html>
+```
