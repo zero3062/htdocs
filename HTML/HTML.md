@@ -4,13 +4,13 @@
 ### HTML is the standard markup language for creating Web pages.
 > (HTML은 WEB 페이지를 생성할 수 있는 표준 Markup 언어이다.)
 
-**HTML stands for Hyper Text Markup Language.**
-**HTML describes the structure of a Web page.**
-**HTML consists of a series of elements.**
-**HTML elements tell the browserhow to display the content.**
-**HTML elements are represented by tags.**
-**HTML tags label pieces of content such as "heading", "paragraph", "table", and so on.**
-**Browsers do not display the HTML tags, but use them to render the content of the page.**
+**HTML stands for Hyper Text Markup Language.**<Br>
+**HTML describes the structure of a Web page.**<br>
+**HTML consists of a series of elements.**<br>
+**HTML elements tell the browserhow to display the content.**<Br>
+**HTML elements are represented by tags.**<Br>
+**HTML tags label pieces of content such as "heading", "paragraph", "table", and so on.**<Br>
+**Browsers do not display the HTML tags, but use them to render the content of the page.**<Br>
 
 > HTML은 Hyper Text Markup 언어를 나타냅니다.<br>
 > HTML은 WEB 페이지의 구조를 묘사합니다.<br>
