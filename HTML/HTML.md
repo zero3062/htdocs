@@ -36,3 +36,14 @@
 <body>
 </html>
 ```
+### Example Explained
+- **The `<!DOCTYPE html>` declaration defines this document to be HTML5**<br>
+- **The `<html>` element is the root element of an HTML page**<br>
+- **The `<head>` element contains meta information about the document**<br>
+- **The `<title>` element specifies a title for the document**<br>
+- **The `<body>` element contains the visible page content**<br>
+- **The `<h1>` element defines a large heading**<br>
+- **The `<p>` element defines a paragraph**<br>
+
+## HTML Tags
+#### HTML tags are element names surrounded by angle brackets:
