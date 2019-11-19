@@ -1,0 +1,268 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #ee0010, #3b00c4);
+            ;
+        }
+
+        form {
+            margin: 0;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        #display {
+            margin-bottom: 3px;
+        }
+
+        .num {
+            background-color: black;
+            opacity: 0.8;
+        }
+
+        form input {
+            position: relative;
+            border: none;
+            left: 3px;
+            width: 265px;
+            height: 40px;
+            text-align: right;
+            padding-right: 10px;
+            color: rgb(53, 53, 53);
+            font-size: 20px;
+        }
+
+        tr input {
+            border: none;
+            width: 50px;
+            height: 40px;
+            background-color: #1b1b1b;
+            opacity: 0.8;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .main {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+        }
+    </style>
+    <script>
+        function cal(self) {
+            document.getElementById("display").value = document.getElementById("display").value + self.id;
+            setTimeout(function() {
+                self.style.background = 'black';
+            },60);
+            self.style.background = '#4B3F3E';
+        }
+        function cal2(self) {
+            document.getElementById("display").value = document.getElementById("display").value + self.id;
+            setTimeout(function() {
+                self.style.background = '#1b1b1b';
+            },60);
+            self.style.background = '#756A68';
+        }
+        function reset() {
+            document.getElementById("display").value = "";
+            setTimeout(function() {
+                document.getElementById("C").style.background = '#1b1b1b';
+            },60);
+            document.getElementById("C").style.background = '#756A68';
+        }
+        function equal() {
+            setTimeout(function() {
+                document.getElementById("=").style.background = '#1b1b1b';
+            },60);
+            document.getElementById("=").style.background = '#756A68';
+            var display = document.getElementById("display").value;
+            // var result = -1;
+            // result = display.match(/\^/);
+            // if (result[0] == '^'){
+            //     alert("Squared_N");
+            //     Squared_N();
+            // }
+            eval_number();
+        }
+        function eval_number(){
+            var display = document.getElementById("display").value;
+            document.getElementById("display").value = eval(display);
+        }
+        function back() {
+            var display = document.getElementById("display").value;
+            document.getElementById("display").value = display.substring(0, display.length - 1);
+            setTimeout(function() {
+                document.getElementById("<").style.background = '#1b1b1b';
+            },60);
+            document.getElementById("<").style.background = '#756A68';
+        }
+        function factorial(self) {
+            document.getElementById("display").value = document.getElementById("display").value + self.id;
+            setTimeout(function() {
+                self.style.background = '#1b1b1b';
+            },60);
+            self.style.background = '#756A68';
+            setTimeout(function() {
+                var i = 1;
+                var fac = 1;
+                var display = document.getElementById("display").value;
+                display = parseInt(display.substring(0, display.length - 1));
+                for (i = 1; i <= display; i++) {
+                    fac = parseInt(fac) * parseInt(i);
+                }
+                document.getElementById("display").value = parseInt(fac);
+            }, 500);
+        }
+        function Squared() {
+            setTimeout(function() {
+                document.getElementById("x^2").style.background = '#1b1b1b';
+            },60);
+            document.getElementById("x^2").style.background = '#756A68';
+            var display = document.getElementById("display").value;
+            document.getElementById("display").value = parseInt(display) * parseInt(display);
+        }
+        function Squared_N() {
+            var display = String(document.getElementById("display").value);
+            var after = display.split('^');
+            document.getElementById("display").value = String(after[0]) + String(after[1]);
+            var num = Number(after[0]);
+            var result = Number(num);
+            for(var i=1;i<after[1];i++){
+                result = parseInt(result) * parseInt(num);
+            }
+            document.getElementById("display").value = Number(result);
+        }
+        function int_change() {
+            var display = document.getElementById("display").value;
+            var re = /\d/g;
+            var result = re.exec(display);
+            document.getElementById("display").value = parseInt(result[10]);
+        }
+        function enter() {
+            if (event.keyCode == 13 || event.which == 13) {
+                setTimeout(function() {
+                    document.getElementById("=").style.background = '#1b1b1b';
+                },60);
+                document.getElementById("=").style.background = '#756A68';
+                equal(); 
+            }
+        }
+        function esc() {
+            if (event.keyCode == 27) { reset(); }
+        }
+        function backspace() {
+            if (event.keyCode == 8) { back(); }
+        }
+        function number() {
+            var num = 96;
+            for (var i = 0; i < 10; i++) {
+                if (event.keyCode == num + i) {
+                    var col = document.getElementById(i);
+                    document.getElementById("display").value = document.getElementById("display").value + String(i);
+                    setTimeout(function() {
+                        col.style.background = 'black';
+                    },60);
+                    col.style.background = '#4B3F3E';
+                }
+            }
+        }
+        function Operator() {
+            for (var i = 0; i < 6; i++)
+                if (event.keyCode == 106 + i) {
+                    var str = String.fromCodePoint(42 + i);
+                    var col = document.getElementById(str);
+                    document.getElementById("display").value = document.getElementById("display").value + str;
+                    setTimeout(function() {
+                        col.style.background = '#1b1b1b';
+                    },60);
+                    col.style.background = '#756A68';
+                }
+        }
+        map = {}
+        function parentheses(e) {
+            e = e||event;
+            map[e.keyCode] = true;
+            if(map[16]&&map[48]){
+                document.getElementById('display').value = document.getElementById("display").value + String(')');
+                setTimeout(function() {
+                    document.getElementById(")").style.background = '#1b1b1b';
+                },60);
+                document.getElementById(")").style.background = '#756A68';
+                map = {};
+                return false;
+            }
+            else if(map[16]&&map[57]){
+                document.getElementById('display').value = document.getElementById("display").value + String('(');
+                setTimeout(function() {
+                    document.getElementById("(").style.background = '#1b1b1b';
+                },60);
+                document.getElementById("(").style.background = '#756A68';
+                map = {};
+                return false;
+            }
+        }
+        function q_press(){
+            if(event.which == 81)
+                Squared();
+        }
+    </script>
+</head>
+
+<body onkeydown="enter();esc();backspace();number();Operator();parentheses(event);q_press();">
+    <div class="main">
+        <form>
+            <input id="display" type="text" readonly><br>
+        </form>
+        <table class="table">
+            <tr align="center">
+                <td><input type="button" id="+/-" value="+/-" onclick="int_change()"></td>
+                <td><input type="button" id="CE" value="CE"></td>
+                <td><input type="button" id="C" value="C" onclick="reset()"></td>
+                <td><input type="button" id="<" value="<" onclick="back()"></td>
+                <td><input type="button" id="/" value="/" onclick="cal2(this)"></td>
+            </tr>
+            <tr align="center">
+                <td><input type="button" id="^" value="x^y" onclick="cal2(this)"></td>
+                <td><input class="num" type="button" id="7" value="7" onclick="cal(this)"></td>
+                <td><input class="num" type="button" id="8" value="8" onclick="cal(this)"></td>
+                <td><input class="num" type="button" id="9" value="9" onclick="cal(this)"></td>
+                <td><input type="button" id="*" value="x" onclick="cal2(this)"></td>
+            </tr>
+            <tr align="center">
+                <td><input type="button" id="x^2" value="x^2" onclick="Squared()"></td>
+                <td><input class="num" type="button" id="4" value="4" onclick="cal(this)"></td>
+                <td><input class="num" type="button" id="5" value="5" onclick="cal(this)"></td>
+                <td><input class="num" type="button" id="6" value="6" onclick="cal(this)"></td>
+                <td><input type="button" id="-" value="-" onclick="cal2(this)"></td>
+            </tr>
+            <tr align="center">
+                <td><input type="button" id="!" value="n!" onclick="factorial(this)"></td>
+                <td><input class="num" type="button" id="1" value="1" onclick="cal(this)"></td>
+                <td><input class="num" type="button" id="2" value="2" onclick="cal(this)"></td>
+                <td><input class="num" type="button" id="3" value="3" onclick="cal(this)"></td>
+                <td><input type="button" id="+" value="+" onclick="cal2(this)"></td>
+            </tr>
+            <tr align="center">
+                <td><input type="button" id="(" value="(" onclick="cal2(this)"></td>
+                <td><input type="button" id=")" value=")" onclick="cal2(this)"></td>
+                <td><input class="num" type="button" id="0" value="0" onclick="cal(this)"></td>
+                <td><input type="button" id="." value="." onclick="cal2(this)"></td>
+                <td><input type="button" id="=" value="=" onclick="equal()"></td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>

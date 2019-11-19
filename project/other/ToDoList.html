@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <style>
+    body{
+        margin: 0;
+    }
+    ul{
+        position: relative;
+        right: 40px;
+        margin: 0;
+        font-size: 20px;
+        list-style: none;
+    }
+    .title{
+        padding-top: 30px;
+        margin: 0;
+        font-size: 40px;
+    }
+    #in{
+        margin: 30px 0px 30px 0px;
+        position: relative;
+        left: 350px;
+        border: 2px solid black;
+        border-radius: 20px;
+        height: 30px;
+        width: 700px;
+        font-size: 20px;
+    }
+    #bu{
+        position: relative;
+        left:360px;
+        height: 30px;
+        width: 70px;
+        font-size: 20px;
+        padding-right: 5px;
+        background-color: white;
+        border: 0px;
+    }
+    .top{
+        background-color: burlywood;
+    }
+    li{
+        background-color: gray;
+        padding: 10px 0px 10px 50px;
+        width: 1486px;
+    }
+    </style>
+    <script type="text/javascript">
+    function click(){
+      
+    }
+    function value_in() {
+      var input = document.getElementById('in').value;
+      temp = input;
+      if(temp == ""){ }
+      else{
+        var node = document.createElement('li');
+        node.setAttribute('id', temp);
+        var textnode = document.createTextNode(temp);
+        document.getElementById(temp).setAttribute('onclick', click());
+        node.appendChild(textnode);
+        document.getElementById("print").appendChild(node);
+      }
+    }
+    function keydown(){
+      if (event.keyCode == 13) {
+        value_in();
+      }
+    }
+    </script>
+  </head>
+  <body>
+    <div class="top">
+        <p class="title" align="center"><b>My To Do List</b></p> 
+        <input id="in" type="text" onkeydown="keydown()">
+        <input id="bu" type="button" onclick="value_in()" value="Print">
+    </div>
+    <div class="main">
+        <ul id="print">
+        </ul>
+    </div>
+  </body>
+</html>
